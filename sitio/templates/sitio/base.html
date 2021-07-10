@@ -1,0 +1,41 @@
+<html>
+<head>
+    {% load pwa %}
+    {% progressive_web_app_meta %}
+    {% load static %}
+    <title>PcFucktory</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+    initial-scale=1, maximum-scale=1, minimum-scale=1">
+    
+    
+    {% block boostrap %} {% endblock %}
+    {% block boostrap4 %} {% endblock %}
+     {% block css %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'sitio/font/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'sitio/css/style_base.css' %}">
+   
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!--<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+   
+</head>
+<body>
+{% block content %}
+
+
+
+
+ {% endblock %}
+    
+<script src="{% static 'login/js/index/menu.js' %}"></script>
+    
+    {% block bsjs %} {% endblock %}
+</body>
+
+</html>

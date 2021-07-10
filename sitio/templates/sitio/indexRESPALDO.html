@@ -1,0 +1,193 @@
+<html lang="es">
+
+<head>
+    {% load static %}
+    <title>PcFucktory</title>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{% static 'sitio/css/base.css'%}">
+    <link rel="stylesheet" href="{% static 'sitio/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="top">
+        <!--Logo-->
+        <div class="header-logo">
+            <img src="{% static 'sitio/img/logo.png'%}" alt="PcFucktory">
+        </div>
+        <!--Buscador-->
+        <div class="header-top-buscador">
+            <form action="#" method="post">
+                <input type="search" name="Search" placeholder="Buscar articulo..." required="">
+                <button type="submit" class="btn btn-default" aria-label="Left Align">
+                        <i class="bucar" aria-hidden="true"><i class="fas fa-search"></i></i>
+                    </button>
+            </form>
+        </div>
+        <!--header menu usuario-->
+        <div class="header-usuario">
+            <nav class="icon-usuario"><i class="fas fa-user"></i> Mi Cuenta</a>
+                <ul class="userMenu-submenu">
+                    <li><a href="login">Iniciar Sesion</a></li>
+                    <li><a href="#">Ver Perfil</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header class="bot">
+        <!--menu articulos-->
+        <div class="header-bot"><i class="fas fa-bars"> Productos</i>
+            <nav class="menu-desplegable">
+                <div class="lista">
+                    <div class="sub-lista">
+                        <div class="seccion">Partes de PC
+                            <ul class="desplegable">
+                                <li><a href="#">Procesadores</a></li>
+                                <li><a href="#">Placas madre</a></li>
+                                <li><a href="#">Ram</a></li>
+                                <li><a href="#">Discos duros</a></li>
+                                <li><a href="#">Gpu</a></li>
+                                <li><a href="#">Fuentes de poder</a></li>
+                                <li><a href="#">Refrigeracion</a></li>
+                                <li><a href="#">Cables</a></li>
+                                <li><a href="#">Gabinetes</a></li>
+                            </ul>
+                        </div>
+                        <div class="seccion">Pantallas
+                            <ul class="desplegable">
+                                <li><a href="#">Monitores</a></li>
+                                <li><a href="#">Lcd</a> </li>
+                                <li><a href="#">Led</a> </li>
+                                <li><a href="#">Smart-Tv</a></li>
+                                <li><a href="#">Proyectores</a> </li>
+                            </ul>
+                        </div>
+                        <div class="seccion">Notebooks
+                            <ul class="desplegable">
+                                <li><a href="#">Hp</a></li>
+                                <li><a href="#">Asus</a></li>
+                                <li><a href="#">Lenovo</a></li>
+                                <li><a href="#">Mac</a></li>
+                                <li><a href="#">Huawei</a></li>
+                                <li><a href="#">Dell</a></li>
+                                <li><a href="#">Acer</a></li>
+                            </ul>
+                        </div>
+                        <div class="seccion">Moviles
+                            <ul class="desplegable">
+                                <li><a href="#">Celulares</a></li>
+                                <li><a href="#">Tablet</a></li>
+                                <li><a href="#">Kindle</a></li>
+                            </ul>
+                        </div>
+                        <div class="seccion">Accessories
+                            <ul class="desplegable">
+                                <li><a href="#">PowerBank</a></li>
+                                <li><a href="#">Cargadores celular</a></li>
+                                <li><a href="#">Cargadores notebooks</a></li>
+                                <li><a href="#">Soporte para celulares</a></li>
+                                <li><a href="#">Soporte para tablet</a></li>
+                                <li><a href="#">Smartwach</a></li>
+                                <li><a href="#">Carcasas</a></li>
+                            </ul>
+                        </div>
+                        <div class="seccion">Otros
+                            <ul class="desplegable">
+                                <li><a href="#">Pasta disipadora</a></li>
+                                <li><a href="#">Pilas</a></li>
+                                <li><a href="#">Luces rgb para mas fps</a></li>
+                                <li><a href="#">Sillas</a></li>
+                                <li><a href="#">Webcam</a></li>
+                                <li><a href="#">Microfonos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <!--Carrito de compra-->
+       <!-- <div class="carro" href=""><i class="fas fa-shopping-cart"></i> Carrito</div> -->
+    </header>
+    <div class="container">
+
+        <div style="float: right;">
+
+            <p class="fas fa-shopping-cart">Carrito</p><br>
+            <p class="fas fa-shopping-cart"></p><br>
+            {% include "carro/widget.html" %}
+        </div>
+        <div class="row">
+            {% for obj in response %}
+                <div class="col-md-3 col-sm-12 col-lg-4">
+                    <div class="card text-center" style="width: 80%; margin: 10px 10px">
+                   <!-- {{ obj.id }} - {{ obj.descripcion }} -->
+                    <img src= "{{url}}{{obj.imagen }}"  class="card-img-top " alt="{{ obj.descripcion }}"/>
+                    <div class="card-body text-center"A>
+                        <h5 class="card-tittle">{{obj.descripcion}}</h5>
+                        <p class="card-text">{{obj.cod_prod}} CLP</p>
+                    </div>
+                        <div class='card-footer text-center'>
+                            <a href="{% url 'carro:agregar' obj.cod_prod %}" class="btn btn-success">Añadir al carrito</a>
+                        </div>
+                    </div>
+                    </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <!--Footer ordenado, falta posicionar abajo de la pagina-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Medios de pago</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-cc-mastercard"> Mastercard</i></a></li>
+                        <li><a href="#"><i class="fab fa-cc-paypal"> Paypal</i></a></li>
+                        <li><a href="#"><i class="fab fa-cc-visa"> Visa</i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menú</h4>
+                    <ul>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Contactar un vendedor</a></li>
+                        <li><a href="#">Página principal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Novedades</h4>
+                    <ul>
+                        <li><a href="#">SmartWatch</a></li>
+                        <li><a href="#">Mochilas</a></li>
+                        <li><a href="#">Notebooks</a></li>
+                        <li><a href="#">Cámaras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social Links</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="derechos">
+            <h4>&copy; 2021 Pcfucktory. Todos los derechos reservados.</h4>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

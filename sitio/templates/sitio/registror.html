@@ -1,0 +1,121 @@
+{% load static %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body background="{% static 'sitio/img/pattern2.jpg'%}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <div id="login-overlay" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Regístrate con PcFucktory.com</h4>
+                <p>Por Favor regístrate en nuestra tienda <b>Pc Fucktory</b>. Podrás recibir instantaneamente cientos de asombrosas ofertas y descuentos, o puedes regresar a nuestra <a href="./index.jsp">página inicial</a>.</p>
+            </div>
+
+            <div class="modal-body">
+
+
+                <form id="registerForm" method="POST">
+                    <!---form--->
+                    <div class="form-group">
+                        <!---input width--->
+                        <div class="col-xs-6">
+                            <label for="InputName">Nombre</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="first_name" placeholder="Ingresar Nombre" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                            <br>
+                            <label for="InputName">Nombre de Usuario</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="username" placeholder="Ingresar nombre de Usuario" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                            <!--------------------------------------separator--------------------------------------------------------------->
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+
+                            <label for="InputName">Apellido</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="last_name" placeholder="Ingresar Apellido" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+
+                            <br>
+                            <label for="InputPassword">Ingresar Contraseña</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="password" placeholder="Ingresar Contraseña" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                            <!--------------------------------------separator--------------------------------------------------------------->
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label for="InputEmail">Ingresar Email</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="email" placeholder="Ingresar Email" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                            <!----------------------------break-------------------------------------------------------------><br>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label for="InputStreetName">Dirección</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="street_name" placeholder="Ingresar calle y número" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                            <!----------------------------break-------------------------------------------------------------><br>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label for="InputCity">Ciudad</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="city" placeholder="Ingresar Ciudad" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                            <!----------------------------break-------------------------------------------------------------><br>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label for="InputProvince">Comuna</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="province" placeholder="Ingresar Comuna" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                            <!----------------------------break-------------------------------------------------------------><br>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group-addon">
+                            <input type="submit" name="submit" id="submit" value="Registrar" class="btn btn-success pull-right">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!---modal-body--->
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

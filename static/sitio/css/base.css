@@ -1,0 +1,293 @@
+/**general**/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/** Formato header top**/
+
+.top {
+    display: inline-block;
+    width: 100%;
+}
+
+
+/** Formato header bot**/
+
+.bot {
+    display: inline-block;
+    width: 100%;
+}
+
+
+/** quita estilo a la lista**/
+
+ul {
+    list-style-type: none;
+}
+
+
+/** LOGO **/
+
+.header-logo img {
+    float: left;
+    margin-top: 65px;
+    margin-left: 55px;
+    height: 80px;
+    font-size: 60%;
+    position: relative;
+}
+
+
+/**Formato barra buscador**/
+
+.header-top-buscador {
+    position: relative;
+    margin-top: 50px;
+    float: left;
+    width: 55%;
+    text-align: center;
+    margin: 4.6em 5em;
+    font-size: 1em;
+    color: #fff;
+    padding: 3px;
+}
+
+.header-top-buscador input[type="search"] {
+    width: 50%;
+    padding: 1em 5em 1em 1em;
+    font-size: 1em;
+    color: #999;
+    outline: none;
+    border: 1px solid #cccccc;
+    background: none;
+    transition: 0.5s all;
+}
+
+.header-top-buscador .btn-default {
+    border: none;
+    top: 5px;
+    right: 3px;
+    width: 79px;
+    height: 48px;
+    outline: none;
+    box-shadow: none;
+    background: #348021ec;
+    padding: 0;
+    border-radius: inherit;
+    -webkit-appearance: none;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    cursor: pointer;
+}
+
+
+/**Menu usuario**/
+
+.header-usuario {
+    margin-top: 90px;
+    position: relative;
+    float: left;
+}
+
+.icon-usuario {
+    font-size: 60%;
+    cursor: pointer;
+    font-size: 23;
+    list-style-type: none;
+}
+
+.icon-usuario:hover .userMenu-submenu {
+    display: block;
+}
+
+.userMenu-submenu {
+    display: none;
+}
+
+.userMenu-submenu a {
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    border-bottom: 1px solid #000;
+    font-size: 20;
+    padding: 2px;
+}
+
+.header-usuario li {
+    text-align: right;
+}
+
+
+/**Header bot**/
+
+.header-bot {
+    position: relative;
+    float: left;
+    margin-left: 55px;
+    font-size: 60%;
+    font-size: 23;
+}
+
+.header-bot:hover .menu-desplegable {
+    display: block;
+}
+
+.menu-desplegable {
+    display: none;
+}
+
+
+/** Lista de productos **/
+
+.seccion {
+    font-size: 20;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    padding: 20px 15px;
+    float: left;
+    left: 0%;
+    right: 0%;
+}
+
+.seccion:hover .desplegable {
+    text-decoration: none;
+    display: block;
+}
+
+.desplegable {
+    display: none;
+}
+
+
+/** Carrito **/
+
+.carro {
+    position: relative;
+    float: center;
+    display: block;
+    margin-left: 920px;
+    font-size: 60%;
+    font-size: 20;
+    cursor: pointer;
+}
+
+
+/** FOOTER**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/** cambio 1**/
+
+.footer {
+    background-color: #24262b;
+    /** position: absolute;
+    width: 100%;**/
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.derechos h4 {
+    color: #ffffff;
+    padding-left: 10%;
+}
+
+
+/*responsive*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
